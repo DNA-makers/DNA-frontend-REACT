@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Item } from "./Item";
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.component {
+  constructor(props) {
+    super(props);
+    this.state = { genes: [] };
+  }
+
+  componentDidMount() {
+    this.logJSONData();
+  }
+
+  logJSONData() {
+    this.url = "";
+    fetch(this.url).then((response) => {
+      response.json().then((data) => this.setState({ cats: data }));
+      console.log(this.state.cats);
+    });
+  }
+
+  render() {
+    let genList;
+    return (
+      <section class="wrapper">
+        <h1>hallo.</h1>
+        {!this.state.cats ? (
+          <p>loading... of er is iets mis.</p>
+        ) : (
+          (genList = this.state.genes.map((ding) => <Item />))
+        )}
+      </section>
+    );
+  }
 }
 
 export default App;
