@@ -2,7 +2,7 @@ import "./App.css";
 import { Item } from "./Item";
 import React from "react";
 
-class App extends React.component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { genes: [] };
@@ -13,7 +13,7 @@ class App extends React.component {
   }
 
   logJSONData() {
-    this.url = "";
+    this.url = "https://api.thecatapi.com/v1/images/search?limit=10";
     fetch(this.url).then((response) => {
       response.json().then((data) => this.setState({ cats: data }));
       console.log(this.state.cats);
@@ -28,7 +28,9 @@ class App extends React.component {
         {!this.state.cats ? (
           <p>loading... of er is iets mis.</p>
         ) : (
-          (genList = this.state.genes.map((ding) => <Item />))
+          (genList = this.state.genes.map((ding) => (
+            <Item key={ding.id} name={ding.id} />
+          )))
         )}
       </section>
     );

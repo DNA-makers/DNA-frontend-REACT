@@ -1,3 +1,5 @@
+import "./Item.css";
+
 export const Item = (props) => {
   return (
     <section className="item">
