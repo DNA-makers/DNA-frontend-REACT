@@ -1,38 +1,68 @@
-import "./App.css";
-import { Item } from "./Item";
-import React from "react";
+// import logo from './logo.svg';
+import './App.css';
 
-class App extends React.component {
-  constructor(props) {
-    super(props);
-    this.state = { genes: [] };
-  }
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-  componentDidMount() {
-    this.logJSONData();
-  }
+const MyComponent = () => {
+  const [data, setData] = useState(null);
 
-  logJSONData() {
-    this.url = "";
-    fetch(this.url).then((response) => {
-      response.json().then((data) => this.setState({ cats: data }));
-      console.log(this.state.cats);
-    });
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // const response = await axios.get('https://swapi.dev/api/people/');
+        const response = await axios.get('http://127.0.0.1:8000/gen');
+        setData(response.data.results);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
-  render() {
-    let genList;
-    return (
-      <section class="wrapper">
-        <h1>hallo.</h1>
-        {!this.state.cats ? (
-          <p>loading... of er is iets mis.</p>
-        ) : (
-          (genList = this.state.genes.map((ding) => <Item />))
-        )}
-      </section>
-    );
-  }
-}
+  return (
 
-export default App;
+    <div>
+      {data &&
+        data.map((gen) => (
+          <div key={gen}>
+          </div>
+        ))}
+
+        Dit is data: {data}
+    </div>
+  );
+};
+
+export default MyComponent;
+// function App() {
+
+//   const { data, isLoading, error } = useFetchData('http://your-laravel-backend-api-endpoint');
+
+//   if (isLoading) {
+//     return <div>Loading...</div>;
+//   }
+
+//   if (error) {
+//     return <div>Error: {error.message}</div>;
+//   }
+  
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
