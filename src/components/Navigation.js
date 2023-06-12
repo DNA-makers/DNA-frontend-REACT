@@ -26,7 +26,7 @@ const Navigation = () => {
         <ul className="menu-items">
           <li><Link to="/landingsPage">Overzicht</Link></li>
           <li><Link to="/aboutus">Over Ons</Link></li>
-          <li><Link to="/landingsPage">FAQ</Link></li>
+          <li><Link to="/faq">FAQ</Link></li>
           <li className="dropdown-item">
             <button className="dropdown-toggle" onClick={handleDropdownToggle}>
               <FontAwesomeIcon icon={faBars} />
