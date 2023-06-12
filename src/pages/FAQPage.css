@@ -1,0 +1,167 @@
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-page{
+    background-color: #FBFBF8;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2 {
+    padding-bottom: 1.5rem;
+    color: #FBFBF8;
+    -webkit-text-fill-color:#FBFBF8;
+}
+
+.p {
+    padding-top: 1.5rem;
+    padding-bottom: 0px;
+    color: #FBFBF8;
+    -webkit-text-fill-color: #FBFBF8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;        
+    align-items: center;
+    max-width: 600px;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #222455;
+    border-radius: 10px;
+    box-shadow: -6px 10px 31px -14px rgba(0, 0, 0, 0.75);
+}
+
+summary::before {
+    font-family: "Hiragino Mincho ProN", "Open Sans", sans-serif;
+    content: "▶";
+    position: absolute;
+    top: 1rem;
+    left: 0.8rem;
+    transform: rotate(0);
+    transform-origin: center;
+    transition: 2s transform ease;
+}
+
+details[open]>summary:before {
+    transform: rotate(90deg);
+    transition: 2s transform ease;
+}
+
+/* # The Sliding Summary # */
+details {
+    overflow: hidden;
+}
+
+details summary {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes details-show {
+    from {
+        margin-bottom: -80%;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+details>*:not(summary) {
+    animation: details-show 500ms ease-in-out;
+    position: relative;
+    z-index: 1;
+    transition: all 2s ease-in-out;
+    color: transparent;
+    overflow: hidden;
+}
+
+details[open]>*:not(summary) {
+    color: inherit;
+}
+
+
+
+
+
+/* # Style 4 # */
+details.style4 summary {
+    padding-right: 2.2rem;
+    padding-left: 1rem;
+}
+
+details.style4 summary::before {
+    content: "×";
+    color: #222455;
+    font-size: 2rem;
+    line-height: 1rem;
+    transform: rotate(-45deg);
+    top: 1.2rem;
+    left: unset;
+    right: 0.6rem;
+}
+
+details[open].style4>summary:before {
+    transform: rotate(90deg);
+    color: #003741 !important;
+    transition: color ease 2s, transform ease 1s;
+}
+
+
+
+
+p {
+    max-width: 500px;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+
+details {
+    max-width: 500px;
+    width:100%;
+    font-weight: 600;
+    box-sizing: border-box;
+    margin-top: 5px;
+    background: white;
+    border-radius: 10px;
+}
+
+summary {
+    border: 4px solid transparent;
+    max-width: 500px;
+    outline: none;
+    padding: 1rem;
+    display: block;
+    background: #FBFBF8;
+    color: #222455;
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+
+}
+
+details[open] summary,
+summary:hover {
+    color: #003741;
+    background: #D6DAE5;
+}
+
+summary:hover strong,
+details[open] summary strong,
+summary:hover::before,
+details[open] summary::before {
+    color: #FBFBF8;
+}
+
+.content {
+    padding: 0.4rem;
+    border-top: none;
+    max-width: 500px;
+}

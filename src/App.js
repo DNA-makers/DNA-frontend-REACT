@@ -4,6 +4,7 @@ import React from "react";
 import LandingPage from "./pages/landingPage";
 import Navigation from "./components/Navigation";
 import HomePage from "./pages/HomePage";
+import FAQPage from "./pages/FAQPage";
 import AboutusPage from "./pages/AboutusPage";
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/FAQPage" element={<FAQPage />} />
             <Route path="/landingsPage" element={<LandingPage />} />
             <Route path="/aboutus" element={<AboutusPage />} />
           </Routes>
