@@ -25,7 +25,7 @@ const Navigation = () => {
         </ul>
         <ul className="menu-items">
           <li><Link to="/landingsPage">Overzicht</Link></li>
-          <li><Link to="/landingsPage">Over Ons</Link></li>
+          <li><Link to="/aboutus">Over Ons</Link></li>
           <li><Link to="/landingsPage">FAQ</Link></li>
           <li className="dropdown-item">
             <button className="dropdown-toggle" onClick={handleDropdownToggle}>
