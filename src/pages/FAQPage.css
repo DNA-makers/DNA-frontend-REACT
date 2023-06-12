@@ -41,12 +41,12 @@ summary::before {
     left: 0.8rem;
     transform: rotate(0);
     transform-origin: center;
-    transition: 0.8s transform ease;
+    transition: 2s transform ease;
 }
 
 details[open]>summary:before {
     transform: rotate(90deg);
-    transition: 0.8s transform ease;
+    transition: 2s transform ease;
 }
 
 /* # The Sliding Summary # */
@@ -71,7 +71,7 @@ details>*:not(summary) {
     animation: details-show 500ms ease-in-out;
     position: relative;
     z-index: 1;
-    transition: all 0.8s ease-in-out;
+    transition: all 2s ease-in-out;
     color: transparent;
     overflow: hidden;
 }
@@ -152,7 +152,7 @@ summary:hover strong,
 details[open] summary strong,
 summary:hover::before,
 details[open] summary::before {
-    color: #FFA128;
+    color: #FBFBF8;
 }
 
 .content {
