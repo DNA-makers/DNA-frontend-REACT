@@ -16,12 +16,14 @@ details summary::-webkit-details-marker {
 .h2 {
     padding-bottom: 1.5rem;
     color: #FBFBF8;
+    -webkit-text-fill-color:#FBFBF8;
 }
 
 .p {
     padding-top: 1.5rem;
     padding-bottom: 0px;
     color: #FBFBF8;
+    -webkit-text-fill-color: #FBFBF8;
 }
 
 .container {
