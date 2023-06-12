@@ -116,7 +116,7 @@ details[open].style4>summary:before {
 
 
 
-p {
+.content > p {
     max-width: 500px;
     font-weight: 500;
     margin: 1rem;
