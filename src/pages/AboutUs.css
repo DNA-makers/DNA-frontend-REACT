@@ -27,7 +27,8 @@ h3{
 
 h1{
     font-size: 40px;
-    padding-bottom: 1em;
+    padding: 0.5em 0;
+    color: white;
 }
 
 h2{
@@ -35,7 +36,7 @@ h2{
     font-size: 24px;
 }
 
-h1, h2, h3, p{
+h2, h3, p{
     background: linear-gradient(
         to bottom, #003741, #222455);
     -webkit-text-fill-color: transparent;
@@ -49,7 +50,7 @@ h1, h2, h3, p{
     align-items: center;
     gap: 5em;
     background-color: white !important;
-    padding: 0 10em;
+    padding: 2em 10em;
 }
 
 .aboutusContainer > ul{
@@ -58,13 +59,24 @@ h1, h2, h3, p{
 }
 
 .aboutusContainer > article{
-    max-height: 90vh;
-    overflow-y: scroll;
+    max-height: calc(100vh - 148px);
     padding: 1em;
+    background-color: #222455;
+    border-radius: 1em;
 }
 
-.aboutusContainer > article > article{
-    margin: 3em 0;
+.aboutus_cards_container > article{
+    margin: 1.5em 0;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.aboutus_cards_container{
+    overflow-y: scroll;
+    max-height: min-content;
+    border-radius: 1em;
+    max-height: calc(100vh - 148px - 9em - 40px);
 }
 
 @media only screen and (max-width: 1500px) {
@@ -78,13 +90,17 @@ h1, h2, h3, p{
         width: 100%;
     }
 
-    h1{
-        display: none;
-    }
-
     .aboutusContainer > article{
         max-height: none;
         overflow-y: scroll;
         padding: 1em;
+    }
+
+    .aboutus_cards_container{
+        max-height: none;
+    }
+    
+    .aboutusContainer{
+        gap: 2em;
     }
 }
