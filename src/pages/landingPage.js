@@ -4,10 +4,8 @@ import ImageComponent from "../components/ImageComponent";
 import logo from "../img/logo.png";
 import LUMC_logo from "../img/LUMC_logo.png";
 import AMC_logo from "../img/AMC_logo.png";
-import EMC_logo from "../img/EMC_logo.png";
+import logo_maasstad from "../img/logo-maasstad.png"
 import ButtonComponent from "../components/ButtonComponent";
-
-import "./LandingPage.css";
 
 function LandingPage() {
   return (
@@ -24,7 +22,7 @@ function LandingPage() {
         <div className="partners">
           <ImageComponent src={LUMC_logo} />
           <ImageComponent src={AMC_logo} />
-          <ImageComponent src={EMC_logo} />
+          <ImageComponent src={logo_maasstad} />
         </div>
       </section>
     </div>
