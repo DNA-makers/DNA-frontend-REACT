@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GenComponent from "../components/GenComponent";
 
-const MyComponent = () => {
+const MyComponent = (props) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -21,11 +21,15 @@ const MyComponent = () => {
 
   return (
     <div className="kolom">
+      <p>afwijkend: {props.variant}</p>
       {data.map((ding) => (
-        <GenComponent key={ding.id} gen_code={ding.gen_code} />
+        <GenComponent
+          key={ding.id}
+          gen_code={ding.gen_code}
+          variant={props.variant}
+          divergent={ding.divergent}
+        />
       ))}
-      <GenComponent />
-
       {/* <article className="kolom">
         <h1>API Data</h1>
         <ul>

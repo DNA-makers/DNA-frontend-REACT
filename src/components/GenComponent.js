@@ -1,11 +1,10 @@
 import "./GenComponent";
 
 const GenComponent = (props) => {
-  return (
-    <section>
-      <p> hallo {props.gen_code}</p>
-    </section>
-  );
+  if (props.variant != props.divergent) {
+    return;
+  }
+  return <button className="kolom-item">{props.gen_code}</button>;
 };
 
 export default GenComponent;

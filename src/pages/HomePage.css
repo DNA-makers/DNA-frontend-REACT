@@ -1,10 +1,40 @@
 .column-container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 12px;
 }
 
 .kolom {
-  border: 2px solid red;
-  height: 80vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(0deg, #eef2ff, #eef2ff),
+    linear-gradient(0deg, #ffffff, #ffffff), #e7edff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 15px;
+  gap: 24px;
+  height: 82vh;
+  width: 204px;
+}
+
+.kolom-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 12px;
+
+  border: 2.5px solid #222455;
+  border-radius: 15px 0px 0px 15px;
+
+  width: 100%;
+
+  font-size: 20px;
+  line-height: 28px;
+  color: #222455;
+}
+
+.kolom-item button {
+  background-color: black;
 }
