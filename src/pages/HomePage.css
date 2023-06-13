@@ -1,0 +1,10 @@
+.column-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.kolom {
+  border: 2px solid red;
+  height: 80vh;
+}
