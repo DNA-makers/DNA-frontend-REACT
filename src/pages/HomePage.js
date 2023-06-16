@@ -26,10 +26,20 @@ const HomePage = () => {
     <div>
       <section className="column-container">
         <article className="kolom">
-          <button className="kolom-item" onClick={toggleVariantComponent}>
+          <button
+            className={
+              variantIsVisible ? "selected-item kolom-item" : "kolom-item"
+            }
+            onClick={toggleVariantComponent}
+          >
             Afwijkend
           </button>
-          <button className="kolom-item" onClick={toggleNonVariantComponent}>
+          <button
+            className={
+              nonVariantIsVisible ? "selected-item kolom-item" : "kolom-item"
+            }
+            onClick={toggleNonVariantComponent}
+          >
             Niet Afwijkend
           </button>
         </article>

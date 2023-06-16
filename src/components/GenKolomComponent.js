@@ -19,12 +19,16 @@ const MyComponent = (props) => {
   }, []);
 
   if (data === null) {
-    return <div>Loading...</div>;
+    return (
+      <article className="kolom">
+        <p>Loading...</p>
+      </article>
+    );
   }
 
   return (
     <article className="kolom">
-      <p>afwijkend: {props.variant}</p>
+      {/* <p>afwijkend: {props.variant}</p> */}
       {data.map((ding) => (
         <GenComponent
           key={ding.id}

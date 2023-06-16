@@ -22,15 +22,16 @@ const AdviceKolomComponent = (props) => {
 
   console.log(gen_code);
   return (
-    <article className="kolom">
-      {data && (
-        <AdviceComponent
-          key={data.id}
-          gen_code={data.gen_code}
-          advise={data.advise}
-        />
-      )}
-
+    <article className="kolom advice-kolom">
+      {data &&
+        data.map((ding) => (
+          <AdviceComponent
+            key={ding.id}
+            gen_code={ding.gen_code}
+            advise={ding.advise}
+            title={ding.title}
+          />
+        ))}
       {/* {data && <AdviceComponent />} */}
     </article>
   );
