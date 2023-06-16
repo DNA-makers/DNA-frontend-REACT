@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import HomePage from "./pages/HomePage";
 import FAQPage from "./pages/FAQPage";
 import AboutusPage from "./pages/AboutusPage";
+import LoginPage from "./pages/LoginPage";
 
 class App extends React.Component {
 
@@ -21,6 +22,7 @@ class App extends React.Component {
             <Route path="/FAQPage" element={<FAQPage />} />
             <Route path="/landingsPage" element={<LandingPage />} />
             <Route path="/aboutus" element={<AboutusPage />} />
+            <Route path="/admin" element={<LoginPage />}></Route>
           </Routes>
         </div>
       </Router>
