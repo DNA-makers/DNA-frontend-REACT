@@ -3,6 +3,9 @@ import GenComponent from "../components/GenComponent";
 
 const MyComponent = (props) => {
   const [data, setData] = useState(null);
+  const getAdvice = (gen_code) => {
+    props.getAdvice(gen_code);
+  };
 
   useEffect(() => {
     fetch("http://127.0.0.1:8000/gen")
@@ -20,7 +23,7 @@ const MyComponent = (props) => {
   }
 
   return (
-    <div className="kolom">
+    <article className="kolom">
       <p>afwijkend: {props.variant}</p>
       {data.map((ding) => (
         <GenComponent
@@ -28,6 +31,7 @@ const MyComponent = (props) => {
           gen_code={ding.gen_code}
           variant={props.variant}
           divergent={ding.divergent}
+          getAdvice={getAdvice}
         />
       ))}
       {/* <article className="kolom">
@@ -43,7 +47,7 @@ const MyComponent = (props) => {
           <li>Updated At: {data.updated_at}</li>
         </ul>
       </article> */}
-    </div>
+    </article>
   );
 };
 
