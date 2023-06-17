@@ -1,15 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ImageComponent from "../components/ImageComponent";
 import logo from "../img/logo-donker.png";
 import "./LoginPage.css";
 
 function LoginPage() {
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
+    const handleLogin = async () => {
         try {
             const response = await fetch("http://localhost:8000/api/login", {
                 method: 'POST',
@@ -20,16 +22,24 @@ function LoginPage() {
             });
 
             if (response.ok) {
+                localStorage.setItem('isLoggedIn', 'true');
+                navigate('/adminpanel');
                 console.log("Succesfully logged in");
             } else {
                 const errorRespnse = await response.json();
                 console.error("Login failed", errorRespnse.message);
+                setErrorMessage(errorRespnse.message);
             }
         } catch (error) {
             console.error("Error occured during login", error);
-            console.log("hdhdhd");
+            setErrorMessage("An error occurred during login.");
         }
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleLogin();
+    }
 
     return (
         <section className="form-container">
@@ -47,6 +57,11 @@ function LoginPage() {
                         <label>Wachtwoord</label>
                         <input type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} />
                     </div>
+                    {errorMessage && 
+                        <div className="error-message">
+                            {errorMessage}
+                        </div>
+                    }
                     <div className="form-field">
                         <button className="submit-btn" type="submit">Log in</button>
                     </div>
