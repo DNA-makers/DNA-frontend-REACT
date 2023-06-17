@@ -52,3 +52,8 @@ input {
     background-color: #2f3167;
     transition: 0.2s all;
 }
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
