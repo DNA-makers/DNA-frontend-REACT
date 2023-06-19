@@ -5,6 +5,7 @@ import AdviceComponent from "./AdviceComponent";
 const AdviceKolomComponent = (props) => {
   const [data, setData] = useState(null);
   const gen_code = props.gen_code;
+  const [query, setQuery] = useState("");
   //   const setAdvice = props.setAdvice;
 
   useEffect(() => {
@@ -23,6 +24,50 @@ const AdviceKolomComponent = (props) => {
   }, [gen_code]);
 
   console.log(gen_code);
+
+  if (props.show_searchbar) {
+    return (
+      <>
+        <article className="kolom search-wrapper">
+          <input
+            id="searchbar-input"
+            type="text"
+            className="search-bar kolom-item"
+            placeholder="Zoeken..."
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </article>
+
+        <article className="kolom advice-kolom">
+          {data &&
+            data
+              .filter((post) => {
+                if (query === "") {
+                  return post;
+                } else if (
+                  post.title.toLowerCase().includes(query.toLowerCase())
+                ) {
+                  return post;
+                }
+              })
+              .map((post, index) => (
+                <AdviceComponent
+                  key={post.id}
+                  gen_code={post.gen_code}
+                  advise={post.advise}
+                  title={post.title}
+                />
+              ))}
+        </article>
+      </>
+    );
+  }
+
+  <article className="kolom-item">
+    <h3>{props.title}</h3>
+    <p>{props.advise}</p>
+  </article>;
+
   return (
     <article className="kolom advice-kolom">
       {data && //als er data is

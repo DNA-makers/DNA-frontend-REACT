@@ -39,6 +39,8 @@ const MyComponent = (props) => {
           getAdvice={getAdvice}
           variant={props.variant}
           divergent={ding.divergent}
+          phenotype={ding.phenotype}
+          diplotype={ding.diplotype}
           onClick={() => {
             setActive(ding);
             getAdvice(ding.gen_code);

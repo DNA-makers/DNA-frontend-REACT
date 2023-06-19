@@ -9,7 +9,7 @@ const GenComponent = (props) => {
       className={props.active ? "selected-item kolom-item" : "kolom-item"}
       onClick={() => props.onClick()}
     >
-      {props.gen_code}
+      <p>{props.gen_code}</p>
     </button>
   );
 };
