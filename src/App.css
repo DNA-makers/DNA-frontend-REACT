@@ -1,29 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Georama:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@200&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --background-gradient: linear-gradient(0deg, rgba(34,36,85,1) 0%, rgba(34,36,85,0.5662640056022409) 50%, rgba(0,55,65,1) 100%);
-    --primary-color: #ffffffff;
+  --background-gradient: linear-gradient(
+    0deg,
+    rgba(34, 36, 85, 1) 0%,
+    rgba(34, 36, 85, 0.5662640056022409) 50%,
+    rgba(0, 55, 65, 1) 100%
+  );
+  --primary-color: #ffffffff;
 }
 
 body {
-    font-family: 'Georama', sans-serif;
-    background: var(--background-gradient) no-repeat fixed;
-    background-size: cover;
-    height: 100%;
+  font-family: "Georama", sans-serif;
+  background: var(--background-gradient) no-repeat fixed;
+  background-size: cover;
+  height: 100%;
 }
 
 .wrapper {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

@@ -1,94 +1,100 @@
 .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
 }
 
 .center img {
-    width: 18vw;
-    min-width: 100px;
-    max-width: 180px;
+  width: 18vw;
+  min-width: 100px;
+  max-width: 180px;
 }
 
 .center h1 {
-    font-weight: 400;
-    font-size: 48px;
+  font-weight: 400;
+  font-size: 48px;
 }
 
 .action-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .buttonContainer {
-    margin: 1.2rem;
-    width: 100%;
+  margin: 1.2rem;
+  width: 100%;
 }
 
 .patient-button,
 .caretaker-button {
-    padding: 20px;
-    margin: 1.5rem;
-    background-color: #003741;
-    border: none;
-    font-size: 28px;
-    color: var(--primary-color);
-    border-radius: 50px;
-    width: 100%;
+  padding: 20px;
+  margin: 1.5rem;
+  background-color: #003741;
+  border: none;
+  font-size: 28px;
+  color: var(--primary-color);
+  border-radius: 50px;
+  width: 100%;
 }
 
 .patient-button {
-    background-color: #222455;
+  background-color: #222455;
 }
 
 .partners-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
-    margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: auto;
 }
-  
+
 .partners-heading {
-    color: white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-  
+
 .partners {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
-    padding: 2rem;
-    margin-top: auto; /* Change this to margin-top: 0; */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  padding: 2rem;
+  margin-top: auto; /* Change this to margin-top: 0; */
 }
-  
+
 .partners img {
-    margin: 0 10px;
-    height: 100px;
+  margin: 0 10px;
+  height: 100px;
+}
+
+.action-buttons > * > a {
+  color: white;
+  opacity: 86%;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 650px) {
-    .center h1{
-        font-size: 35px;
-    }
+  .center h1 {
+    font-size: 35px;
+  }
 
-    .partners-heading {
-        font-size: 16px;
-    }
+  .partners-heading {
+    font-size: 16px;
+  }
 
-    .partners img {
-        margin: 0 10px;
-        height: 70px;
-    }
+  .partners img {
+    margin: 0 10px;
+    height: 70px;
+  }
 }
