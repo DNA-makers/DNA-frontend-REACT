@@ -1,0 +1,79 @@
+h1 {
+    margin: 1rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #22245556;
+    resize: horizontal;
+    width: 100%;
+    overflow-x: auto;
+}
+
+th {
+    color: white;
+    padding: 10px;
+}
+  
+.input-field {
+    padding: 1rem;
+    width: 100%;
+    resize: horizontal;
+}
+  
+.title-input-field {
+    width: 25vw;
+}
+  
+.advice-input-field {
+    width: 60vw;
+}
+
+.save-btn {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #222455;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #2f3167;
+    transition: 0.2s all;
+}
+
+.gencode-buttons {
+    margin: 1rem;
+}
+
+.gencode-buttons button {
+    margin: 10px;
+    padding: 10px;
+}
+
+.gencode-buttons button.active {
+    background-color: #222455;
+    border: none;
+    color: white;
+}
+
+.delete-btn {
+    padding: 1rem;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(214, 7, 7);
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: rgba(214, 7, 7, 0.716);
+    transition: 0.2s all;
+}
