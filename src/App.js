@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import FAQPage from "./pages/FAQPage";
 import AboutusPage from "./pages/AboutusPage";
 import LoginPage from "./pages/LoginPage";
+import NotFound from "./components/NotFound";
 import AdminPage from "./pages/AdminPage";
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
             <Route path="/landingsPage" element={<LandingPage />} />
             <Route path="/aboutus" element={<AboutusPage />} />
             <Route path="/admin" element={<LoginPage />}></Route>
+            <Route path="*" element={<NotFound />} />
             <Route path="/adminpanel" element={<AdminPage />}></Route>
           </Routes>
         </div>
