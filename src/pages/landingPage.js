@@ -1,7 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
 import ImageComponent from "../components/ImageComponent";
-import logo from "../img/logo.png";
+import logo from "../logo1.svg";
 import LUMC_logo from "../img/LUMC_logo.png";
 import AMC_logo from "../img/AMC_logo.png";
 import logo_maasstad from "../img/logo-maasstad.png"
@@ -11,7 +11,8 @@ function LandingPage() {
   return (
     <div className="landing-page">
       <div className="center">
-        <ImageComponent src={logo} alt="Image is loading..." />
+        <ImageComponent src={logo} alt="logo van MijnDNAmedicatiepas"/>
+        <h1>MijnDNAmedicatiepas</h1>
         <section className="action-buttons">
           <ButtonComponent text="Informatie voor patienten" className="patient-button"/>
           <ButtonComponent text="Informatie voor zorgverleners" className="caretaker-button"/>

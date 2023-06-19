@@ -4,7 +4,7 @@ import "./Navigation.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faFont, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import ImageComponent from "./ImageComponent";
-import Nav_logo from "../img/navbar-logo.png";
+import Nav_logo from "../logo.svg";
 import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -35,9 +35,12 @@ const Navigation = () => {
       <nav>
       <div className="navbar-container">
         <ul className="menu-items">
-          <li className="">
-            <Link to="/">
-              <ImageComponent src={Nav_logo} alt={"MijnDNAmedicatiepas"} style={{  height: "80px" }}/>
+          <li>
+            <Link to="/" className="main-title">
+              <ImageComponent src={Nav_logo} alt="MijnDNAmedicatiepas logo"/>
+              <section className="title">
+                <h1>MijnDNAmedicatiepas</h1>
+              </section>  
             </Link>
           </li>
         </ul>
@@ -65,9 +68,13 @@ const Navigation = () => {
       <nav>
       <div className="navbar-container">
         <ul className="menu-items">
-          <li className="">
-            <Link to="/">
-              <ImageComponent src={Nav_logo} alt={"MijnDNAmedicatiepas"} style={{  height: "80px" }}/>
+          <li>
+            <Link to="/" className="main-title">
+              <ImageComponent src={Nav_logo} alt="MijnDNAmedicatiepas"/>
+              <section className="title">
+                <h1>MijnDNAmedicatiepas</h1>
+                <h2>Betrouwbare adviezen op basis van uw DNA.</h2>
+              </section>  
             </Link>
           </li>
         </ul>
