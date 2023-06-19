@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./AdminPage.css";
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function AdminPage() {
     const [genCodes, setGenCodes] = useState([]);
@@ -159,7 +161,7 @@ function AdminPage() {
                             />
                         </td>
                         <td>
-                            <button className="delete-btn" onClick={() => deleteRow(index)}>Verwijderen</button>
+                            <button className="delete-btn" onClick={() => deleteRow(index)}><FontAwesomeIcon icon={faTrash} /></button>
                         </td>
                         </tr>
                     ))}
