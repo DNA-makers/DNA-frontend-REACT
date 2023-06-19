@@ -39,7 +39,7 @@ const Navigation = () => {
       <div className="navbar-container">
         <ul className="menu-items">
           <li>
-            <Link to="/" className="main-title">
+            <Link to="/landingsPage" className="main-title">
               <ImageComponent src={Nav_logo} alt="MijnDNAmedicatiepas logo" />
               <section className="title">
                 <h1>MijnDNAmedicatiepas</h1>
@@ -71,9 +71,6 @@ const Navigation = () => {
               <li>
                 <Link to="/FAQPage">FAQPage</Link>
               </li>
-              <li>
-                <Link to="/medAdvice">Advies Overzicht</Link>
-              </li>
             </ul>
           )}
         </ul>
@@ -84,7 +81,7 @@ const Navigation = () => {
       <div className="navbar-container">
         <ul className="menu-items">
           <li>
-            <Link to="/" className="main-title">
+            <Link to="/landingsPage" className="main-title">
               <ImageComponent src={Nav_logo} alt="MijnDNAmedicatiepas" />
               <section className="title">
                 <h1>MijnDNAmedicatiepas</h1>
