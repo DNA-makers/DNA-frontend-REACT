@@ -3,7 +3,8 @@ h1 {
 }
 
 .table-wrapper {
-    overflow-x: auto;
+    margin: auto;
+    max-width: 800px;
 }
 
 table {
@@ -12,12 +13,28 @@ table {
     background-color: #22245556;
     resize: horizontal;
     width: 100%;
-    overflow-x: auto;
 }
-
+thead{
+    width: 100%;
+}
 th {
     color: white;
     padding: 10px;
+}
+
+
+
+tbody {
+    width: 100%;
+}
+
+tr{
+    width: 60vw;
+    height: fit-content;
+}
+
+td {
+    width: 100%;
 }
   
 .input-field {
@@ -26,18 +43,21 @@ th {
     resize: horizontal;
 }
   
-.title-input-field {
-    width: 25vw;
-}
+/* .title-input-field {
+    width: 20vw;
+} */
   
 .advice-input-field {
-    width: 60vw;
+    min-width: 150px;
+    max-width: 450px;
+    width: 45vw;
 }
 
 .save-btn {
+    justify-content: center;
     margin: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #222455;
+    background-color: #448300;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -45,7 +65,7 @@ th {
 }
 
 .save-btn:hover {
-    background-color: #2f3167;
+    background-color: #448300a7;
     transition: 0.2s all;
 }
 
@@ -76,4 +96,28 @@ th {
 .delete-btn:hover {
     background-color: rgba(214, 7, 7, 0.716);
     transition: 0.2s all;
+}
+
+@media (max-width: 768px) {
+    table {
+      font-size: 0.8rem;
+    }
+
+    .table-wrapper{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    td{
+        height:max-content;
+    }
+    .delete-btn {
+        padding: 0.5rem;
+        justify-content: flex-end;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(214, 7, 7);
+        color: white;
+        font-size: 12px;
+    }
 }
