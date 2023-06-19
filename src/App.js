@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import LandingPage from "./pages/landingPage";
 import Navigation from "./components/Navigation";
@@ -8,11 +8,10 @@ import FAQPage from "./pages/FAQPage";
 import AboutusPage from "./pages/AboutusPage";
 import LoginPage from "./pages/LoginPage";
 import AdminPage from "./pages/AdminPage";
+import MedAdvice from "./pages/MedAdvice";
 
 class App extends React.Component {
-
   render() {
-
     return (
       <Router>
         <div>
@@ -25,6 +24,7 @@ class App extends React.Component {
             <Route path="/aboutus" element={<AboutusPage />} />
             <Route path="/admin" element={<LoginPage />}></Route>
             <Route path="/adminpanel" element={<AdminPage />}></Route>
+            <Route path="/medAdvice" element={<MedAdvice />}></Route>
           </Routes>
         </div>
       </Router>
