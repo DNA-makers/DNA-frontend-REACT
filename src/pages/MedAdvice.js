@@ -4,7 +4,7 @@ import "./HomePage.css";
 
 const MedAdvice = () => {
   return (
-    <section className="column-container">
+    <section className="column-container advices-container">
       <AdviceKolomComponent gen_code={""} />
     </section>
   );
