@@ -51,7 +51,7 @@
 .menu-items {
   list-style-type: none;
   display: flex;
-  gap: 10px;
+  gap: 2rem;
   order: 2;
   margin-right: 1rem;
 }
@@ -74,11 +74,11 @@
 .menu-items li.active a::after {
   content: "";
   position: absolute;
-  bottom: -2px; /* Adjust the spacing as needed */
+  bottom: -2px;
   left: 0;
   right: 0;
-  height: 2px; /* Adjust the height as needed */
-  background-color: #222455; /* Adjust the color as needed */
+  height: 2px;
+  background-color: #222455;
 }
 
 .dropdown-toggle {
@@ -116,7 +116,7 @@
   background-color: #0000001a;
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 829px) {
   .menu-items {
     flex-direction: column;
     align-items: center;
