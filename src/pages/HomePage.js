@@ -6,20 +6,24 @@ import "./HomePage.css";
 const HomePage = () => {
   const [variantIsVisible, setVariantIsVisible] = useState(false);
   const [nonVariantIsVisible, setNonVariantIsVisible] = useState(false);
+  const [adviceIsVisible, setAdviceIsVisible] = useState(false);
   const [gen_code, setGenCode] = useState(null);
 
   const toggleVariantComponent = () => {
     setVariantIsVisible(!variantIsVisible);
     setNonVariantIsVisible(false);
+    setAdviceIsVisible(false);
   };
 
   const toggleNonVariantComponent = () => {
     setNonVariantIsVisible(!nonVariantIsVisible);
     setVariantIsVisible(false);
+    setAdviceIsVisible(false);
   };
 
   const getAdviceParent = (code) => {
     setGenCode(code);
+    setAdviceIsVisible(true);
   };
 
   return (
@@ -50,7 +54,9 @@ const HomePage = () => {
           <GenKolomComponent variant={0} getAdvice={getAdviceParent} />
         )}
 
-        {gen_code && <AdviceKolomComponent gen_code={gen_code} />}
+        {adviceIsVisible && gen_code && (
+          <AdviceKolomComponent gen_code={gen_code} />
+        )}
       </section>
     </div>
   );

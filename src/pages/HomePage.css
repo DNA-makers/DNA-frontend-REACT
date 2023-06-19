@@ -17,7 +17,7 @@
   gap: 16px;
 
   min-height: fit-content;
-  min-width: 180px;
+  min-width: 184px;
   width: auto;
   border-radius: 4px;
   border: 3px solid #222455;
@@ -47,9 +47,19 @@
   font-size: 16px;
   color: #222455;
 
+  transition: ease all 200ms;
+
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    linear-gradient(0deg, #eef2ff, #eef2ff),
-    linear-gradient(0deg, #ffffff, #ffffff), #e7edff;
+    linear-gradient(0deg, #eef2ff, #eef2ff);
+}
+
+button.kolom-item:hover {
+  color: #f8f8fb;
+
+  background: #3b3d86;
+  box-shadow: 2px 4px 4px lightgray;
+
+  transition: ease all 200ms;
 }
 
 .selected-item {
@@ -57,6 +67,7 @@
   background: #222455;
   border: 2px solid #f8f8fb;
   border-radius: 0px 18px 18px 0px;
+  box-shadow: 2px 4px 4px lightgray;
 }
 
 h3 {

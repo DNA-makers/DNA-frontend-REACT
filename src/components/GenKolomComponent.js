@@ -3,7 +3,10 @@ import GenComponent from "../components/GenComponent";
 
 const MyComponent = (props) => {
   const [data, setData] = useState(null);
+  const [active, setActive] = useState(null);
+
   const getAdvice = (gen_code) => {
+    // setSelectedGen(gen_code);
     props.getAdvice(gen_code);
   };
 
@@ -21,36 +24,30 @@ const MyComponent = (props) => {
   if (data === null) {
     return (
       <article className="kolom">
-        <p>Loading...</p>
+        <p className="kolom-item">Loading...</p>
       </article>
     );
   }
 
   return (
     <article className="kolom">
-      {/* <p>afwijkend: {props.variant}</p> */}
       {data.map((ding) => (
         <GenComponent
           key={ding.id}
+          active={active === ding}
           gen_code={ding.gen_code}
+          getAdvice={getAdvice}
           variant={props.variant}
           divergent={ding.divergent}
-          getAdvice={getAdvice}
-        />
+          onClick={() => {
+            setActive(ding);
+            getAdvice(ding.gen_code);
+            console.log(active);
+          }}
+        >
+          {ding}
+        </GenComponent>
       ))}
-      {/* <article className="kolom">
-        <h1>API Data</h1>
-        <ul>
-          <li>ID: {data.id}</li>
-          <li>User ID: {data.user_id}</li>
-          <li>Gen Code: {data.gen_code}</li>
-          <li>Diplotype: {data.diplotype}</li>
-          <li>Phenotype: {data.phenotype}</li>
-          <li>Divergent: {data.divergent}</li>
-          <li>Created At: {data.created_at}</li>
-          <li>Updated At: {data.updated_at}</li>
-        </ul>
-      </article> */}
     </article>
   );
 };
