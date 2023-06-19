@@ -164,9 +164,15 @@ function AdminPage() {
                         </tr>
                     ))}
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colSpan="3" style={{ textAlign: "center" }}>
+                                <button className="save-btn" onClick={saveChanges}>Opslaan</button>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
-            <button className="save-btn" onClick={saveChanges}>Opslaan</button>
         </> 
     )
 }
