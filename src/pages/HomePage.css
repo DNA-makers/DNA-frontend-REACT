@@ -3,6 +3,9 @@
   flex-direction: row;
   gap: 0px;
   padding: 6px;
+
+  /* min-height: fit-content; */
+  min-height: calc(100vh - 72px);
 }
 
 .kolom {
@@ -16,7 +19,6 @@
   margin: 2px;
   gap: 16px;
 
-  min-height: fit-content;
   min-width: 184px;
   width: auto;
   border-radius: 4px;
@@ -26,6 +28,7 @@
 .advice-kolom {
   width: min-content;
   flex-grow: 1;
+  /* flex-shrink: 1; */
 }
 
 .kolom-item {
@@ -70,5 +73,50 @@ button.kolom-item:hover {
   box-shadow: 2px 4px 4px lightgray;
 }
 
-h3 {
+.search-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.search-bar {
+  width: 100%;
+  font-size: 24px;
+  line-height: 190%;
+
+  color: #f8f8fb;
+  border: 2px solid #f8f8fb;
+  border-radius: 0px 18px 18px 0px;
+  background: #3b3d86;
+  box-shadow: 2px 4px 4px lightgray;
+}
+
+.advices-container > article {
+  width: 100%;
+}
+
+.advices-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 830px) {
+  .advices-container {
+    width: 100%;
+  }
+
+  .column-container {
+    flex-direction: column;
+  }
+
+  .kolom {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+
+  .advice-kolom {
+    flex-direction: column;
+    width: 100%;
+  }
 }
