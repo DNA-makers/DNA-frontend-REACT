@@ -9,7 +9,7 @@ const NotFound = () => {
       <h2>Page Not Found</h2>
       <p>De pagina die u probeert te bereiken bestaat niet.</p>
       <Link to="/landingsPage">
-        <button className='returnButton'>Return home</button>
+        <button className='returnButton'>Terug naar homepagina</button>
       </Link>
       
     </div>
