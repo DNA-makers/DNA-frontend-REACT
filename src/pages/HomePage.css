@@ -1,7 +1,7 @@
 .column-container {
   display: flex;
   flex-direction: row;
-  gap: 0px;
+  gap: 4px;
   padding: 6px;
 
   /* min-height: fit-content; */
@@ -16,7 +16,8 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  margin: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
   gap: 16px;
 
   min-width: 184px;
@@ -26,7 +27,6 @@
 }
 
 .advice-kolom {
-  width: min-content;
   flex-grow: 1;
   /* flex-shrink: 1; */
 }
@@ -73,21 +73,35 @@ button.kolom-item:hover {
   box-shadow: 2px 4px 4px lightgray;
 }
 
-.search-wrapper {
+#search-wrapper {
   width: 100%;
   text-align: center;
 }
 
-.search-bar {
+.searchbar-input {
   width: 100%;
-  font-size: 24px;
-  line-height: 190%;
+  /* font-size: 24px; */
 
   color: #f8f8fb;
   border: 2px solid #f8f8fb;
   border-radius: 0px 18px 18px 0px;
   background: #3b3d86;
-  box-shadow: 2px 4px 4px lightgray;
+  box-shadow: 2px 4px 4px rgba(52, 38, 88, 0.611);
+}
+
+.thin-bar {
+  font-size: 20px;
+  line-height: 120%;
+  border: 12px solid red;
+}
+
+.thick-bar {
+  font-size: 24px;
+  line-height: 190%;
+}
+
+.vertical {
+  width: 100%;
 }
 
 .advices-container > article {

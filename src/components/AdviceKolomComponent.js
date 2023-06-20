@@ -24,12 +24,12 @@ const AdviceKolomComponent = (props) => {
 
   if (props.show_searchbar) {
     return (
-      <>
-        <article className="kolom search-wrapper">
+      <section className="vertical">
+        <article id="search-wrapper" className="kolom">
           <input
-            id="searchbar-input"
+            // id="searchbar-input"
             type="text"
-            className="search-bar kolom-item"
+            className={props.bar_style}
             placeholder="Zoeken..."
             onChange={(event) => setQuery(event.target.value)}
           />
@@ -42,7 +42,9 @@ const AdviceKolomComponent = (props) => {
                 if (query === "") {
                   return post;
                 } else if (
-                  post.title.toLowerCase().includes(query.toLowerCase())
+                  post.title.toLowerCase().includes(query.toLowerCase()) ||
+                  post.advise.toLowerCase().includes(query.toLowerCase()) ||
+                  post.gen_code.toLowerCase().includes(query.toLowerCase())
                 ) {
                   return post;
                 }
@@ -57,7 +59,7 @@ const AdviceKolomComponent = (props) => {
                 />
               ))}
         </article>
-      </>
+      </section>
     );
   }
 
