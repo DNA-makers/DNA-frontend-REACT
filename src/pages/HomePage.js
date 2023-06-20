@@ -36,7 +36,7 @@ const HomePage = () => {
             }
             onClick={toggleVariantComponent}
           >
-            Afwijkend
+            <p>Afwijkend</p>
           </button>
           <button
             className={
@@ -44,7 +44,7 @@ const HomePage = () => {
             }
             onClick={toggleNonVariantComponent}
           >
-            Niet Afwijkend
+            <p>Niet Afwijkend</p>
           </button>
         </article>
         {variantIsVisible && (

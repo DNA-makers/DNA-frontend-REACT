@@ -1,11 +1,23 @@
 import "./AdviceComponent";
+import { useState } from "react";
 
 const AdviceComponent = (props) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
+  };
+
   return (
-    <article className="kolom-item">
+    <button
+      className={
+        expanded ? "kolom-item expand selected-item" : "kolom-item collapsed"
+      }
+      onClick={toggleExpanded}
+    >
       <h3>{props.title}</h3>
       <p>{props.advise}</p>
-    </article>
+    </button>
   );
 };
 
