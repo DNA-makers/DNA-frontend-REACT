@@ -44,7 +44,6 @@ const MyComponent = (props) => {
           onClick={() => {
             setActive(ding);
             getAdvice(ding.gen_code);
-            console.log(active);
           }}
         >
           {ding}

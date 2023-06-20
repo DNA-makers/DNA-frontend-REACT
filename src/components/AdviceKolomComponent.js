@@ -15,15 +15,12 @@ const AdviceKolomComponent = (props) => {
         .then((response) => response.json())
         .then((data) => {
           setData(data);
-          console.log(data);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
         });
     }
   }, [gen_code]);
-
-  console.log(gen_code);
 
   if (props.show_searchbar) {
     return (
@@ -49,6 +46,7 @@ const AdviceKolomComponent = (props) => {
                 ) {
                   return post;
                 }
+                return false;
               })
               .map((post, index) => (
                 <AdviceComponent

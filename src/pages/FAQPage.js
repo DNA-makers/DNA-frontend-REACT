@@ -9,7 +9,7 @@ function FAQPage() {
           <h2 className="h2">FAQ - Veelgestelde vragen</h2>
           <details class="style4">
             <summary>Wat wordt er met mijn gegevens gedaan?</summary>
-            <div class="content">
+            <div className="content">
               <p>
                 Bij ons bedrijf hechten we grote waarde aan de privacy en
                 veiligheid van de gegevens van onze gebruikers. Wanneer u uw
