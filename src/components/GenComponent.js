@@ -1,7 +1,7 @@
 import "./GenComponent";
 
 const GenComponent = (props) => {
-  if (props.variant != props.divergent) {
+  if (props.variant !== props.divergent) {
     return;
   }
   return (

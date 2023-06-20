@@ -55,7 +55,10 @@ const HomePage = () => {
         )}
 
         {adviceIsVisible && gen_code && (
-          <AdviceKolomComponent gen_code={gen_code} />
+          <AdviceKolomComponent
+            gen_code={gen_code}
+            // show_searchbar={1}
+          />
         )}
       </section>
     </div>
