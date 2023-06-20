@@ -19,9 +19,9 @@ class App extends React.Component {
           <Navigation />
 
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/overzicht" element={<HomePage />} />
             <Route path="/FAQPage" element={<FAQPage />} />
-            <Route path="/landingsPage" element={<LandingPage />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/aboutus" element={<AboutusPage />} />
             <Route path="/admin" element={<LoginPage />}></Route>
             <Route path="*" element={<NotFound />} />

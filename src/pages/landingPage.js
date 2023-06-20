@@ -22,7 +22,7 @@ function LandingPage() {
           <ButtonComponent
             text="Informatie voor zorgverleners"
             className="caretaker-button"
-            link="/"
+            link="/overzicht"
           />
         </section>
       </div>

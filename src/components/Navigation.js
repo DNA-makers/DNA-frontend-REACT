@@ -39,7 +39,7 @@ const Navigation = () => {
       <div className="navbar-container">
         <ul className="menu-items">
           <li>
-            <Link to="/landingsPage" className="main-title">
+            <Link to="/" className="main-title">
               <ImageComponent src={Nav_logo} alt="MijnDNAmedicatiepas logo" />
               <section className="title">
                 <h1>MijnDNAmedicatiepas</h1>
@@ -63,7 +63,7 @@ const Navigation = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu open">
               <li>
-                <Link to="/landingsPage">Overzicht</Link>
+                <Link to="/">Overzicht</Link>
               </li>
               <li>
                 <Link to="/aboutus">Over Ons</Link>
@@ -81,7 +81,7 @@ const Navigation = () => {
       <div className="navbar-container">
         <ul className="menu-items">
           <li>
-            <Link to="/landingsPage" className="main-title">
+            <Link to="/" className="main-title">
               <ImageComponent src={Nav_logo} alt="MijnDNAmedicatiepas" />
               <section className="title">
                 <h1>MijnDNAmedicatiepas</h1>
@@ -91,8 +91,8 @@ const Navigation = () => {
           </li>
         </ul>
         <ul className="menu-items">
-          <li className={location.pathname === "/landingsPage" ? "active" : ""}>
-            <Link to="/landingsPage">Overzicht</Link>
+          <li className={location.pathname === "/" ? "active" : ""}>
+            <Link to="/">Overzicht</Link>
           </li>
           <li className={location.pathname === "/aboutus" ? "active" : ""}>
             <Link to="/aboutus">Over Ons</Link>
