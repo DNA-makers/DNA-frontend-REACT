@@ -7,7 +7,7 @@ function FAQPage() {
       <section className="faq">
         <section className="container">
           <h2 className="h2">FAQ - Veelgestelde vragen</h2>
-          <details class="style4">
+          <details className="style4">
             <summary>Wat wordt er met mijn gegevens gedaan?</summary>
             <div className="content">
               <p>
@@ -21,9 +21,9 @@ function FAQPage() {
               </p>
             </div>
           </details>
-          <details class="style4">
+          <details className="style4">
             <summary>Waarop wordt jullie advies gebaseerd?</summary>
-            <div class="content">
+            <div className="content">
               <p>
                 Ons advies is gebaseerd op gedegen wetenschappelijk onderzoek en
                 de analyse van uw genetische informatie. Door middel van
@@ -36,9 +36,9 @@ function FAQPage() {
               </p>
             </div>
           </details>
-          <details class="style4">
+          <details className="style4">
             <summary>Wat gebeurt er als ik mijn pas kwijtraak?</summary>
-            <div class="content">
+            <div className="content">
               <p>
                 Indien u uw pas kwijtraakt, raden wij u aan om zo spoedig
                 mogelijk contact met ons op te nemen. We zullen de nodige
@@ -51,9 +51,9 @@ function FAQPage() {
               </p>
             </div>
           </details>
-          <details class="style4">
+          <details className="style4">
             <summary>Hoe hebben jullie getest?</summary>
-            <div class="content">
+            <div className="content">
               <p>
                 Onze dienst is ontwikkeld en gevalideerd op basis van
                 uitgebreide wetenschappelijke studies en klinische testen. We
@@ -68,9 +68,9 @@ function FAQPage() {
               </p>
             </div>
           </details>
-          <details class="style4">
+          <details className="style4">
             <summary>Hoe zit het met de AVG?</summary>
-            <div class="content">
+            <div className="content">
               <p>
                 Bij ons bedrijf nemen we de bescherming van persoonsgegevens
                 zeer serieus en voldoen we aan de Algemene Verordening

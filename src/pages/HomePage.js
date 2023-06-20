@@ -57,7 +57,8 @@ const HomePage = () => {
         {adviceIsVisible && gen_code && (
           <AdviceKolomComponent
             gen_code={gen_code}
-            // show_searchbar={1}
+            show_searchbar={1}
+            bar_style={"kolom-item searchbar-input"}
           />
         )}
       </section>
