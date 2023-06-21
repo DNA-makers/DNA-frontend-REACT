@@ -96,6 +96,10 @@ button.expand:hover {
   background: #c8c9f5;
 }
 
+.advice-kolom > button {
+  text-align: left;
+}
+
 #search-wrapper {
   width: 100%;
   text-align: center;

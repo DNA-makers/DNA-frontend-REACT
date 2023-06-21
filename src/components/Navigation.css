@@ -32,6 +32,7 @@
     rgba(0, 55, 65, 1) 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
   margin-bottom: 0.4rem;
@@ -46,6 +47,7 @@
     rgba(0, 55, 65, 1) 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   padding: 0;
