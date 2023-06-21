@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0rem 1.5rem;
-  background-color: #D6DAE5;
+  background-color: #d6dae5;
 }
 
 .main-title {
@@ -26,23 +26,33 @@
 }
 
 .title h1 {
-  background: -webkit-linear-gradient(90deg, rgba(34, 36, 85, 1) 0%, rgba(0, 55, 65, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(34, 36, 85, 1) 0%,
+    rgba(0, 55, 65, 1) 100%
+  );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 30px;
   margin-bottom: 0.4rem;
   padding: 0;
   font-weight: 500;
-} 
+}
 
 .title h2 {
-    background: -webkit-linear-gradient(90deg, rgba(34, 36, 85, 1) 0%, rgba(0, 55, 65, 1) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 18px;
-      padding: 0;
-      font-weight: 400;
-}      
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(34, 36, 85, 1) 0%,
+    rgba(0, 55, 65, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  padding: 0;
+  font-weight: 400;
+}
 
 .navbar-logo {
   order: 1;
@@ -84,7 +94,7 @@
 .dropdown-toggle {
   border: none;
   background: none;
-}  
+}
 
 .dropdown-toggle.rotate {
   transform: rotate(90deg);
@@ -98,8 +108,8 @@
   left: 0;
   padding: 0;
   margin: 0;
-  background-color: #FBFBF8;
-  border: 1px solid #FBFBF8;
+  background-color: #fbfbf8;
+  border: 1px solid #fbfbf8;
   white-space: nowrap;
   z-index: 1;
 }
@@ -130,12 +140,12 @@
     padding: 0;
   }
 
-  .title h1{
+  .title h1 {
     font-size: 20px;
     margin: 0;
   }
 
-  .main-title{
+  .main-title {
     padding: 0.5rem 0rem !important;
   }
 
@@ -155,8 +165,8 @@
     left: 0;
     padding: 0;
     margin: 0;
-    background-color: #FBFBF8;
-    border: 1px solid #FBFBF8;
+    background-color: #fbfbf8;
+    border: 1px solid #fbfbf8;
     white-space: nowrap;
     z-index: 1;
     display: none;

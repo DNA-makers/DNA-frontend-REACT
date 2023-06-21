@@ -64,6 +64,12 @@ button.kolom-item:hover {
   transition: ease all 200ms;
 }
 
+button.collapsed:hover,
+button.expand:hover {
+  color: black;
+  background-color: #b3b4ef;
+}
+
 .kolom-item p {
   font-weight: 460;
   line-height: 140%;
@@ -86,7 +92,12 @@ button.kolom-item:hover {
 }
 
 .expand {
-  background: #292b61;
+  color: black;
+  background: #c8c9f5;
+}
+
+.advice-kolom > button {
+  text-align: left;
 }
 
 #search-wrapper {
